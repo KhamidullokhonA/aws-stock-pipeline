@@ -1,11 +1,14 @@
 # AWS Serverless Stock Market Data Pipeline
 
 ## Architecture
-![Architecture Diagram](architecture/diagram.png)
+![Architecture Diagram](diagram.jpg)
 
 ## Overview
 An end-to-end serverless data pipeline that fetches daily stock market 
 data, transforms it, and visualizes it in a dashboard.
+
+> Currently tracking AAPL — can be extended to any stock ticker 
+> by updating the SYMBOL environment variable in Lambda.
 
 ## Tech Stack
 - **Ingestion:** AWS Lambda + EventBridge
@@ -30,4 +33,4 @@ Alpha Vantage API → Lambda → S3 (raw) → Glue → S3 (processed) → Athena
 8. Connect QuickSight to Athena for dashboard
 
 ## Dashboard Preview
-![QuickSight Dashboard](architecture/dashboard.png)
+![QuickSight Dashboard](qsight_dashboard.jpg)
